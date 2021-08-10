@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/xmarcos/enchinito-api/compare/v1.0.1...v1.0.2) (2021-08-10)
+
+
+### Bug Fixes
+
+* **version:** add semantic-release/npm with publish:false to bump pkg.json version ([623c78f](https://github.com/xmarcos/enchinito-api/commit/623c78f97728c84cfbf2dfd62988cf9888f46da9))
+
 ## [1.0.1](https://github.com/xmarcos/enchinito-api/compare/v1.0.0...v1.0.1) (2021-08-10)
 
 
