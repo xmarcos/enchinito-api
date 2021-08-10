@@ -60,6 +60,7 @@ router.all('*', (req) => {
   }
   const body = JSON.stringify({
     goto: '/enchinito/:input',
+    version,
   });
 
   return new Response(body, {
