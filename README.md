@@ -1,4 +1,4 @@
-# enChinito API
+# enchinito API
 
 A useless API for [@xmarcos/enchinito](https://github.com/xmarcos/enchinito) using [Cloudflare Workers](https://workers.cloudflare.com/).
 

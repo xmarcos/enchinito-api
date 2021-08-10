@@ -83,13 +83,13 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
-      "@semantic-release/git",
       [
         "@semantic-release/npm",
         {
           "npmPublish": false
         }
       ],
+      "@semantic-release/git",
       "@semantic-release/github"
     ],
     "tagFormat": "v${version}"
@@ -99,7 +99,7 @@
     "lint": "eslint",
     "prepare": "is-ci || husky install"
   },
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "volta": {
     "node": "14.17.3",
     "yarn": "1.22.10"
