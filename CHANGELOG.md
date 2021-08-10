@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/xmarcos/enchinito-api/compare/v1.0.0...v1.0.1) (2021-08-10)
+
+
+### Bug Fixes
+
+* **api:** added version to / ([9812d62](https://github.com/xmarcos/enchinito-api/commit/9812d62f0b0e2b354022453d7e2a148e75ec2f51))
+
 # 1.0.0 (2021-08-10)
 
 
