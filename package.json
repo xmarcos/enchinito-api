@@ -1,0 +1,101 @@
+{
+  "author": "Marcos Sader <xmarcos@gmail.com>",
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "dependencies": {
+    "@xmarcos/enchinito": "^0.4.2",
+    "itty-router": "^2.3.10"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^2.2.2",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@commitlint/cz-commitlint": "^13.1.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@types/node": "^16.4.13",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "commitizen": "^4.2.4",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-typescript": "^3.0.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^7.0.1",
+    "is-ci": "^3.0.0",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2",
+    "semantic-release": "^17.4.4",
+    "ts-loader": "^8.3.0",
+    "typescript": "^4.3.5",
+    "webpack": "^4.46.0"
+  },
+  "engine-strict": true,
+  "engines": {
+    "node": ">=12"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "prettier"
+    ],
+    "root": true,
+    "rules": {
+      "prettier/prettier": 2
+    }
+  },
+  "homepage": "https://github.com/xmarcos/enchinito-api",
+  "lint-staged": {
+    "*.js": "eslint --fix --format"
+  },
+  "main": "dist/worker.js",
+  "name": "enchinito-api",
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false
+  },
+  "private": true,
+  "release": {
+    "branches": [
+      "master",
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ],
+    "tagFormat": "v${version}"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "lint": "eslint",
+    "prepare": "is-ci || husky install"
+  },
+  "version": "0.1.0",
+  "volta": {
+    "node": "14.17.3",
+    "yarn": "1.22.10"
+  }
+}
