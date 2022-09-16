@@ -1,6 +1,4 @@
 name = "enchinito-api"
-type = "webpack"
 account_id = "d4a1d752981f8b6317a65495079aa476"
-workers_dev = true
-target_type = "webpack"
-webpack_config = "webpack.config.js"
+main = "src/index.ts"
+compatibility_date = "2022-09-15"

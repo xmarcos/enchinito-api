@@ -1,7 +1,6 @@
 import { Router } from 'itty-router';
 import { enchinito } from '@xmarcos/enchinito';
 import pkg from '../package.json';
-import { EOL } from 'os';
 
 const router = Router();
 
@@ -15,7 +14,7 @@ router.all('/enchinito/:input', (req, event: FetchEvent) => {
   const output = enchinito(input);
 
   if (acceptHeader === 'text/plain') {
-    return new Response(`${output}${EOL}`, {
+    return new Response(`${output}\n`, {
       headers: {
         'Content-Type': 'text/plain; charset=utf-8',
       },
