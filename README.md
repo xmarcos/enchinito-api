@@ -5,7 +5,7 @@ A useless API for [@xmarcos/enchinito](https://github.com/xmarcos/enchinito) usi
 ## Usage
 
 ```bash
-curl -s "https://enchinito-api.xmarcos.workers.dev/enchinito/Sudo make me a sandwich" | jq .
+curl -s "https://enchinito-api.xmarcos.workers.dev/enchinito/Sudo%20make%20me%20a%20sandwich" | jq .
 # {
 #   "input": "Sudo make me a sandwich",
 #   "output": "Sidi miki mi i sindwich",
@@ -17,11 +17,12 @@ You can also get the response in `text/plain` or `application/xml`.
 
 ```bash
 # pipe-friendly text
-curl -s "https://enchinito-api.xmarcos.workers.dev/enchinito/Sudo make me a sandwich" -H "Accept: text/plain" | rev
+curl -s "https://enchinito-api.xmarcos.workers.dev/enchinito/Sudo%20make%20me%20a%20sandwich" -H "Accept: text/plain" | rev
 # hciwdnis i im ikim idiS
 
 # verbose xml, if you are into that
-curl -s "https://enchinito-api.xmarcos.workers.dev/enchinito/Sudo make me a sandwich" -H "Accept: application/xml" | xq
+# brew install python-yq
+curl -s "https://enchinito-api.xmarcos.workers.dev/enchinito/Sudo%20make%20me%20a%20sandwich" -H "Accept: application/xml" | xq
 # <data>
 #   <input>Sudo make me a sandwich</input>
 #   <output>Sidi miki mi i sindwich</output>
@@ -29,11 +30,31 @@ curl -s "https://enchinito-api.xmarcos.workers.dev/enchinito/Sudo make me a sand
 # </data>
 ```
 
+## Setup
+
+```bash
+# needs node v16+
+npm install -g wrangler
+npm install
+```
+
 ## Development
+
+→ <http://0.0.0.0:8787>
 
 ```bash
 wrangler dev
 # 🤞
+```
+
+## Deploy
+
+→ <https://enchinito-api.xmarcos.workers.dev/>
+
+```bash
+wrangler publish
+# tail prod logs
+wrangler tail
 ```
 
 ## But why?
