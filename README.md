@@ -47,6 +47,8 @@ wrangler dev
 # 🤞
 ```
 
+> [Conventional Commits](https://www.conventionalcommits.org/en/about/) are enforced using a hook but there is no `prepare-commit-msg` _wizard_. You can do `npm run commit` if you need that.
+
 ## Deploy
 
 → <https://enchinito-api.xmarcos.workers.dev/>
