@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/xmarcos/enchinito-api/compare/v1.0.3...v2.0.0) (2022-09-16)
+
+
+### Features
+
+* **release:** trigger v2 ([6c147dd](https://github.com/xmarcos/enchinito-api/commit/6c147dd1bac35cb1bbede32a72f8498c76c12818))
+
+
+### BREAKING CHANGES
+
+* **release:** moved to wrangler v2
+
 ## [1.0.3](https://github.com/xmarcos/enchinito-api/compare/v1.0.2...v1.0.3) (2021-08-10)
 
 
