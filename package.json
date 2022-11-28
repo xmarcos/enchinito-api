@@ -13,7 +13,7 @@
     "itty-router": "^2.6.6"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^3.18.0",
+    "@cloudflare/workers-types": "^4.20221111.1",
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.2.0",
     "@commitlint/prompt-cli": "^17.2.0",
