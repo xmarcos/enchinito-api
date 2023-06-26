@@ -22,7 +22,7 @@
     "husky": "^8.0.3",
     "is-ci": "^3.0.1",
     "semantic-release": "^21.0.1",
-    "wrangler": "^3.1.0"
+    "wrangler": "^3.1.1"
   },
   "engines": {
     "node": ">=16"
