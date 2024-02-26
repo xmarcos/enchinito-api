@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@xmarcos/enchinito": "^0.4.2",
-    "itty-router": "^4.0.23"
+    "itty-router": "^4.0.27"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20231025.0",
