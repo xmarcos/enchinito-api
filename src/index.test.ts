@@ -64,4 +64,49 @@ describe('enchinito-api', () => {
     
     expect(response.headers.get('Content-Type')).toBe('image/svg+xml');
   });
+
+  it('should be case-insensitive for Accept headers', async () => {
+    const request = new Request('https://example.com/enchinito/Test', {
+      headers: { 'Accept': 'APPLICATION/XML' }
+    });
+    // @ts-ignore
+    const response = await router.handle(request, { request });
+    expect(response.headers.get('Content-Type')).toContain('application/xml');
+  });
+
+  it('should handle special characters and spaces', async () => {
+    const request = new Request('https://example.com/enchinito/Hello%20%26%20Welcome%21');
+    // @ts-ignore
+    const response = await router.handle(request, { request });
+    const data = await response.json();
+    expect(data.input).toBe('Hello & Welcome!');
+    expect(data.output).toBe('Hilli & Wilcimi!');
+  });
+
+  it('should handle text with no vowels', async () => {
+    const request = new Request('https://example.com/enchinito/Fly%20Sky');
+    // @ts-ignore
+    const response = await router.handle(request, { request });
+    const data = await response.json();
+    expect(data.output).toBe('Fly Sky');
+  });
+
+  it('should preserve vowel casing (if library supports it)', async () => {
+    const request = new Request('https://example.com/enchinito/AEIOU%20aeiou');
+    // @ts-ignore
+    const response = await router.handle(request, { request });
+    const data = await response.json();
+    // Assuming enchinito maps A->I, a->i
+    expect(data.output).toBe('IIIII iiiii');
+  });
+
+  it('should work with different HTTP methods', async () => {
+    const methods = ['GET', 'POST', 'PUT', 'DELETE'];
+    for (const method of methods) {
+      const request = new Request('https://example.com/enchinito/test', { method });
+      // @ts-ignore
+      const response = await router.handle(request, { request });
+      expect(response.status).toBe(200);
+    }
+  });
 });
