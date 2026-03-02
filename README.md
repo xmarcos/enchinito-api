@@ -30,22 +30,15 @@ curl -s "https://enchinito-api.xmarcos.workers.dev/enchinito/Sudo%20make%20me%20
 # </data>
 ```
 
-## Setup
-
-```bash
-# needs node v16+
-npm install -g wrangler
-npm install
-```
-
 ## Development
 
-→ <http://0.0.0.0:8787>
+Local development is powered by Docker.
 
 ```bash
-wrangler dev
-# 🤞
+docker compose up
 ```
+
+→ <http://localhost:8787>
 
 > [Conventional Commits](https://www.conventionalcommits.org/en/about/) are enforced using a hook but there is no `prepare-commit-msg` _wizard_. You can do `npm run commit` if you need that.
 
