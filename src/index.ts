@@ -67,6 +67,4 @@ router.all('*', (req) => {
   });
 });
 
-addEventListener('fetch', (event) => {
-  event.respondWith(router.handle(event.request, event));
-});
+export { router };

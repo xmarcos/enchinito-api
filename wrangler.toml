@@ -1,4 +1,4 @@
 name = "enchinito-api"
 account_id = "d4a1d752981f8b6317a65495079aa476"
-main = "src/index.ts"
+main = "src/worker.ts"
 compatibility_date = "2022-09-15"

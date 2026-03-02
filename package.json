@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "commit": "commit",
-    "prepare": "is-ci || husky install"
+    "prepare": "is-ci || husky install",
+    "test": "vitest run"
   },
   "dependencies": {
     "@xmarcos/enchinito": "^0.4.2",
@@ -22,6 +23,7 @@
     "husky": "^9.0.11",
     "is-ci": "^3.0.1",
     "semantic-release": "^23.0.2",
+    "vitest": "^1.4.0",
     "wrangler": "4.69.0"
   },
   "engines": {
