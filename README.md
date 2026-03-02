@@ -9,7 +9,7 @@ curl -s "https://enchinito-api.xmarcos.workers.dev/enchinito/Sudo%20make%20me%20
 # {
 #   "input": "Sudo make me a sandwich",
 #   "output": "Sidi miki mi i sindwich",
-#   "version": "0.1.0"
+#   "version": "2.1.0"
 # }
 ```
 
@@ -26,7 +26,7 @@ curl -s "https://enchinito-api.xmarcos.workers.dev/enchinito/Sudo%20make%20me%20
 # <data>
 #   <input>Sudo make me a sandwich</input>
 #   <output>Sidi miki mi i sindwich</output>
-#   <version>0.1.0</version>
+#   <version>2.1.0</version>
 # </data>
 ```
 
