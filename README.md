@@ -47,7 +47,12 @@ docker compose up
 → <https://enchinito-api.xmarcos.workers.dev/>
 
 ```bash
-wrangler publish
+# Using Docker
+CLOUDFLARE_API_TOKEN=your_token_here docker compose run --rm app wrangler deploy
+
+# Or using native wrangler
+wrangler deploy
+
 # tail prod logs
 wrangler tail
 ```
