@@ -8,5 +8,6 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=development
+      - CLOUDFLARE_API_TOKEN
     stdin_open: true
     tty: true
