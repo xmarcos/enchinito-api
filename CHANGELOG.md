@@ -1,3 +1,16 @@
+# [2.1.0](https://github.com/xmarcos/enchinito-api/compare/v2.0.0...v2.1.0) (2026-3-2)
+
+
+### Bug Fixes
+
+* **ci:** upgrade github actions to v4 ([13f3467](https://github.com/xmarcos/enchinito-api/commit/13f346773551b3b7c945c3483dd81a492d36d16f))
+
+
+### Features
+
+* add docker deployment instructions and environment support ([a908dad](https://github.com/xmarcos/enchinito-api/commit/a908dad8b7b3aafe06a8522996f44aecedded119))
+* add docker support for local development ([3c8af82](https://github.com/xmarcos/enchinito-api/commit/3c8af82381e57a17a7158a9db224ff87353e464a))
+
 # [2.0.0](https://github.com/xmarcos/enchinito-api/compare/v1.0.3...v2.0.0) (2022-09-16)
 
 
