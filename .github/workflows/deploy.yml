@@ -19,10 +19,29 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: build and deploy
+      - name: get node version
+        run: echo "NODE_VERSION=$(node -p "JSON.parse(fs.readFileSync('./.versions','utf8')).node")" >> $GITHUB_OUTPUT
+        id: node_version
+
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ steps.node_version.outputs.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: install dependencies
+        env:
+          HUSKY: 0
+        run: npm install
+
+      - name: run semantic-release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: deploy to cloudflare workers
         run: |
           docker compose run --rm \
-            -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} \
             -e CLOUDFLARE_API_TOKEN=${{ secrets.CF_API_TOKEN }} \
             app \
-            bash -c "npx semantic-release && npx wrangler deploy"
+            npx wrangler deploy
