@@ -19,7 +19,6 @@ GEMINI.md
 Dockerfile
 docker-compose.yml
 wrangler.toml
-package-lock.json
 
 # Misc
 .DS_Store

@@ -5,7 +5,7 @@ FROM node:20-slim
 WORKDIR /app
 
 # Copy package configuration files first to optimize layer caching
-COPY package.json ./
+COPY package.json package-lock.json ./
 
 # Install project dependencies quietly and skip post-install scripts (e.g., husky)
 RUN npm install --no-audit --no-fund --quiet && \
