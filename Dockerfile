@@ -1,5 +1,5 @@
-# Use Node.js 20 as the base image for stability and compatibility
-FROM node:20-slim
+# Use Node.js 22 as the base image for stability and compatibility
+FROM node:22-slim
 
 # Set the working directory inside the container
 WORKDIR /app
