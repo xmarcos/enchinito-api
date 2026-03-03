@@ -9,7 +9,7 @@ COPY package.json ./
 
 # Install project dependencies quietly and skip post-install scripts (e.g., husky)
 RUN npm install --no-audit --no-fund --quiet && \
-    npm install -g wrangler@4.69.0 && \
+    npm install -g wrangler@$(node -p "require('./package.json').devDependencies.wrangler") && \
     npm cache clean --force
 
 # Copy the rest of the application code

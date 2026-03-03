@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "commit": "commit",
+    "dev": "wrangler dev",
     "prepare": "is-ci || husky install",
     "test": "vitest run"
   },
@@ -27,7 +28,7 @@
     "wrangler": "4.69.0"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=20"
   },
   "release": {
     "branches": [
