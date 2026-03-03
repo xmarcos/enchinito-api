@@ -9,7 +9,6 @@ COPY package.json package-lock.json ./
 
 # Install project dependencies quietly and skip post-install scripts (e.g., husky)
 RUN npm install --no-audit --no-fund --quiet && \
-    npm install -g wrangler@$(node -p "require('./package.json').devDependencies.wrangler") && \
     npm cache clean --force
 
 # Copy the rest of the application code
@@ -18,5 +17,5 @@ COPY . .
 # Expose the default Wrangler development port
 EXPOSE 8787
 
-# Use 'wrangler dev' to run the development server, binding to all interfaces
-CMD ["wrangler", "dev", "--ip", "0.0.0.0", "--port", "8787"]
+# Use 'npx wrangler dev' to run the development server, binding to all interfaces
+CMD ["npx", "wrangler", "dev", "--ip", "0.0.0.0", "--port", "8787"]
