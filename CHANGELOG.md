@@ -1,3 +1,16 @@
+# [2.2.0](https://github.com/xmarcos/enchinito-api/compare/v2.1.0...v2.2.0) (2026-03-03)
+
+
+### Bug Fixes
+
+* **ci:** isolate semantic-release and use docker only for app tasks ([6122202](https://github.com/xmarcos/enchinito-api/commit/61222028a2191d2eb6050684e0affad37cec8435))
+
+
+### Features
+
+* add vitest and github action for automated testing ([02713cd](https://github.com/xmarcos/enchinito-api/commit/02713cdf615f3aed7671077f8671098cec52c7b7))
+* migrate CI/CD to Docker-based workflows ([db92751](https://github.com/xmarcos/enchinito-api/commit/db927511c0a3f85e7120f7855ae76fbc1ba841cd))
+
 # [2.1.0](https://github.com/xmarcos/enchinito-api/compare/v2.0.0...v2.1.0) (2026-3-2)
 
 
