@@ -25,4 +25,4 @@ jobs:
             -e GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} \
             -e CLOUDFLARE_API_TOKEN=${{ secrets.CF_API_TOKEN }} \
             app \
-            bash -c "npx semantic-release && npx wrangler deploy"
+            bash -c "git config --global --add safe.directory /app && npx semantic-release && npx wrangler deploy"
