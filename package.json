@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240314.0",
-    "@commitlint/cli": "^19.0.3",
+    "@commitlint/cli": "^20.4.2",
     "@commitlint/config-conventional": "^19.1.0",
     "@commitlint/prompt-cli": "^20.4.2",
     "@semantic-release/changelog": "^6.0.3",
