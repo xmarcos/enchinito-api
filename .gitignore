@@ -1,3 +1,19 @@
+# Dependencies
 node_modules/
-.wrangler
+
+# Cloudflare Workers
+.wrangler/
+.dev.vars
+
+# Gemini CLI
 GEMINI.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Misc
+dist/
+coverage/
+.npm
+npm-debug.log*

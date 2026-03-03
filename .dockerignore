@@ -1,8 +1,17 @@
-node_modules
-.git
-.github
-.husky
+# Dependencies
+node_modules/
+
+# Source Control
+.git/
+.github/
+
+# Tooling
+.husky/
 .versions
+.wrangler/
+.dev.vars
+
+# Documentation & Config
 CHANGELOG.md
 LICENSE.md
 README.md
@@ -10,4 +19,8 @@ GEMINI.md
 Dockerfile
 docker-compose.yml
 wrangler.toml
-package-lock.json
+
+# Misc
+.DS_Store
+dist/
+coverage/
