@@ -24,7 +24,7 @@ jobs:
         id: node_version
 
       - name: setup node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ steps.node_version.outputs.NODE_VERSION }}
           cache: 'npm'
