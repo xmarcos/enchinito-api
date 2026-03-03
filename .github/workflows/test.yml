@@ -20,19 +20,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: get node version
-        run: echo "NODE_VERSION=$(node -p "JSON.parse(fs.readFileSync('./.versions','utf8')).node")" >> $GITHUB_OUTPUT
-        id: node_version
-      - name: setup node
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ steps.node_version.outputs.NODE_VERSION }}
-          cache: 'npm'
-      - name: install dependencies
-        env:
-          HUSKY: 0
-        run: npm install
-      - name: run tests
-        run: npm test
+
+      - name: build and test
+        run: docker compose run --rm app npm test
