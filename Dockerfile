@@ -1,9 +1,6 @@
 # Use Node.js 20 as the base image for stability and compatibility
 FROM node:20-slim
 
-# Install git for semantic-release and other tools
-RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
-
 # Set the working directory inside the container
 WORKDIR /app
 
