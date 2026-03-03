@@ -30,32 +30,34 @@ curl -s "https://enchinito-api.xmarcos.workers.dev/enchinito/Sudo%20make%20me%20
 # </data>
 ```
 
-## Development
+## Local Development
 
-Local development is powered by Docker.
+All development tasks are powered by Docker to ensure environment parity.
 
+### Start Development Server
 ```bash
 docker compose up
 ```
-
 → <http://localhost:8787>
 
-> [Conventional Commits](https://www.conventionalcommits.org/en/about/) are enforced using a hook but there is no `prepare-commit-msg` _wizard_. You can do `npm run commit` if you need that.
-
-## Deploy
-
-→ <https://enchinito-api.xmarcos.workers.dev/>
-
+### Run Tests
 ```bash
-# Using Docker
-CLOUDFLARE_API_TOKEN=your_token_here docker compose run --rm app wrangler deploy
-
-# Or using native wrangler
-wrangler deploy
-
-# tail prod logs
-wrangler tail
+docker compose run --rm app npm test
 ```
+
+### Deploy
+```bash
+CLOUDFLARE_API_TOKEN=your_token_here docker compose run --rm app npx wrangler deploy
+```
+
+### Tail Production Logs
+```bash
+docker compose run --rm app npx wrangler tail
+```
+
+---
+
+> [Conventional Commits](https://www.conventionalcommits.org/en/about/) are enforced using a hook. You can run `docker compose run --rm app npm run commit` if you need a wizard.
 
 ## But why?
 
